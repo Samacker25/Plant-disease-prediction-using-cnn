@@ -24,4 +24,4 @@ RUN cp config.toml /.streamlit/config.toml
 RUN cp credentials.toml /.streamlit/credentials.toml
 
 # This sets the default command for the container to run your app.py script when the container starts.
-CMD ["python", "main.py"]
+CMD ["streamlit", "run", "main.py", "--server.port=80", "--server.address=0.0.0.0"]
