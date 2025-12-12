@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 #This tells Docker to listen on port 80 is the standard port for HTTP
-EXPOSE 80
+EXPOSE 7860
 
 # This command creates a .streamlit directory in the home directory of the contanier.
 RUN mkdir -p /.streamlit
@@ -24,4 +24,4 @@ RUN cp config.toml /.streamlit/config.toml
 RUN cp credentials.toml /.streamlit/credentials.toml
 
 # This sets the default command for the container to run your app.py script when the container starts.
-CMD ["streamlit", "run", "main.py", "--server.port=80", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "main.py", "--server.port=7860", "--server.address=0.0.0.0"]
