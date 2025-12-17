@@ -1,0 +1,8 @@
+# model files
+* .h5
+app/trained_model/
+
+# Virtual environment
+.venv/
+venv/
+env/
