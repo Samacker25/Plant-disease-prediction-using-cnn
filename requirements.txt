@@ -1,8 +1,7 @@
-numpy==1.26.3
 streamlit==1.30.0
-keras>=3.0.0
-opencv-python-headless
+tensorflow==2.15.0
+numpy==1.26.3
 pillow
-matplotlib
+opencv-python-headless
 scikit-learn
 huggingface-hub
