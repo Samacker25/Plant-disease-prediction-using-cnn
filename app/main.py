@@ -35,12 +35,17 @@ def load_model():
         extract_dir = os.path.join(repo_dir, "model")
 
         if not os.path.exists(extract_dir):
+            os.makedirs(extract_dir, exist_ok=True)
             with tarfile.open(tar_path, "r:gz") as tar:
                 tar.extractall(path=extract_dir)
 
-        model_path = os.path.join(
-            repo_dir, "model", "plant_disease_prediction_model"
-        )
+        # Auto-detect SavedModel folder
+        for root, dirs, files in os.walk(extract_dir):
+            if "saved_model.pb" in files:
+                model_path = root
+                break
+        else:
+            raise FileNotFoundError("saved_model.pb not found after extraction")
 
         model = tf.keras.models.load_model(model_path)
         return model

@@ -1,6 +1,9 @@
 streamlit==1.30.0
 tensorflow==2.15.0
-numpy==1.26.3
-pillow
-huggingface-hub
 keras==2.15.0
+numpy==1.26.3
+opencv-python-headless
+pillow
+matplotlib
+scikit-learn
+huggingface-hub
