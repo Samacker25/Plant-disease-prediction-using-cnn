@@ -2,7 +2,7 @@
 FROM python:3.10-slim
 
 # Streamlit uses port 8501
-EXPOSE 8501
+EXPOSE 7806
 
 # Prevent Python buffering issues
 ENV PYTHONUNBUFFERED=1
@@ -35,4 +35,3 @@ ENV STREAMLIT_SERVER_HEADLESS=true \
 
 # Start Streamlit
 CMD ["streamlit", "run", "app/main.py"]
-    
