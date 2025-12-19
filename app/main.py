@@ -14,7 +14,7 @@ import tarfile
 working_dir = os.path.dirname(os.path.abspath(__file__))
 
 # --------------------------------------------------
-# Load model from Hugging Face (Keras 3 safe)
+# Load model from Hugging Face
 # --------------------------------------------------
 @st.cache_resource
 def load_model():
